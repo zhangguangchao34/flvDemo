@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never">
+    <title></title>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/flv.js/1.2.0/flv.min.js"></script>
+<video id="videoElement"></video>
+<script>
+    if (flvjs.isSupported()) {
+        var videoElement = document.getElementById('videoElement');
+        var flvPlayer = flvjs.createPlayer({
+            type: 'flv',
+            cors:true,
+//            withCredentials:false,
+ //           url:"2329521-1.flv",//通过下边的链接将视频下载到本地能够播放
+            url: 'http://cn-bjsj-cc-v-03.acgvideo.com/vg5/b/5b/17889388-2.flv?expires=1496295300&platform=pc&ssig=8XVd7SdqyCbbCRMLPSYzOg&oi=2093755105&nfa=iCnd1wqqoAsXLyv+e2tfVA==&dynamic=1',
+            //url: 'http://movie.ks.js.cn/flv/other/1_0.flv',
+//            //直接去播放这个链接播放不了。不知道为什么。
+        });
+        flvPlayer.attachMediaElement(videoElement);
+        flvPlayer.load();
+        flvPlayer.play();
+    }else{
+        alert("1111")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="referrer" content="never">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="tl_player" style="width: 670px; height: 450px;"></div>
+</body>
+</html>
+<script src="flowplayer/flowplayer-3.2.13.min.js"></script>
+<script>
+    flowplayer("tl_player", "flowplayer/flowplayer-3.2.18.swf", {
+        clip: {
+//            url:"2329521-1.flv",
+            url:"http://124.193.230.148/video.dispatch.tc.qq.com/v0023a49lsb.p201.1.mp4?vkey=181085FA2CB655FB722E1DD064735A898880AE3BCBF043562A7C74AA1F76CFF694687D941980146688B8DF366BBBC4EA067D7A57B4827B83860744FB0A9AF8F2C502CCDA0013D40A47635FA43F09F89A7059CFBC76B0E7619A2A488EBF8CABDC2CB950DF0DB0BEDE17AACF981F059855&locid=626266f6-f7e8-4dff-bcee-f75c569985e0&size=80206634&ocid=2382435756",
+//            url:"http://movie.ks.js.cn/flv/other/1_0.flv",
+            autoPlay: false,
+            autoBuffering: true
+        },
+        onLoad: function() {    // 当播放器载入完成时调用
+//            this.setVolume(30);    // 设置音量0-100，默认50
+            alert(555)
+        }
+    });
+</script>
